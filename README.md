@@ -91,7 +91,7 @@ This project integrates multiple AI modalities to create a comprehensive retail 
 
 ### Retail Product Recognition
 
-![Product Recognition Demo](docs/images/product-recognition-demo.gif)
+![Product Recognition Demo](docs/images/product-recognition-demo.png)
 
 Upload an image of a store shelf or product to identify items, check inventory, and answer natural language queries about the products.
 
