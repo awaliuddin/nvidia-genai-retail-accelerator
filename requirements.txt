@@ -1,0 +1,55 @@
+# Base dependencies
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+scikit-learn>=1.2.0
+tqdm>=4.65.0
+
+# Deep learning frameworks
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.30.0
+accelerate>=0.20.0
+diffusers>=0.18.0
+
+# Computer vision
+opencv-python>=4.7.0
+pillow>=9.5.0
+albumentations>=1.3.0
+
+# NLP and LLM
+sentence-transformers>=2.2.2
+langchain>=0.0.235
+openai>=0.27.0
+tiktoken>=0.4.0
+
+# NVIDIA-specific
+nvtx>=0.2.6
+tensorrt>=8.6.0  # Adjust version as needed
+onnx>=1.14.0
+onnxruntime-gpu>=1.15.0
+
+# Vector databases
+pymilvus>=2.2.8
+
+# Visualization and UI
+streamlit>=1.23.0
+gradio>=3.33.0
+plotly>=5.14.0
+
+# Utilities
+pyyaml>=6.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+fastapi>=0.97.0
+uvicorn>=0.22.0
+
+# Jupyter tools
+jupyterlab>=4.0.0
+ipywidgets>=8.0.6
+ipython>=8.14.0
+
+# Data handling
+pyarrow>=12.0.0
+duckdb>=0.8.0

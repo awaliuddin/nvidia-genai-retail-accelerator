@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  retail-genai:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: retail-genai-accelerator
+    container_name: retail-genai-accelerator
+    restart: unless-stopped
+    ports:
+      - "8888:8888"  # Jupyter Lab
+      - "8000:8000"  # Demo application
+    volumes:
+      - ..:/app
+      - retail-genai-data:/app/data
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+
+  # Optional additional service for vector database
+  vector-db:
+    image: milvusdb/milvus:v2.3.3
+    container_name: retail-genai-vector-db
+    ports:
+      - "19530:19530"
+      - "19531:19531"
+    volumes:
+      - milvus-data:/var/lib/milvus
+    environment:
+      - MILVUS_HOST=vector-db
+      - MILVUS_PORT=19530
+
+volumes:
+  retail-genai-data:
+  milvus-data:
